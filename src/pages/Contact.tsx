@@ -83,7 +83,7 @@ const Contact = () => {
               {/* Map */}
               <div className="rounded-2xl overflow-hidden shadow-card h-48 bg-muted">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.143285942467!2d77.50436837586542!3d13.026514917637841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d84379ca283%3A0x6a0ed7d686001d9f!2s487%2C%2013th%20Cross%20Rd%2C%204th%20Phase%2C%20Peenya%20Industrial%20Area%20Phase%20IV%2C%20Peenya%2C%20Bengaluru%2C%20Karnataka%20560058!5e0!3m2!1sen!2sin!4v1714472345678!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2932493679077!2d77.5018843736754!3d13.016988337302525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cfac4663ddb%3A0xc169fcf8ebfffd0!2sUnnathi%20CNC%20Technologies%20Pvt%20Ltd%2C%20Unit%201!5e0!3m2!1sen!2sin!4v1775124633753!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
