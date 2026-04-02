@@ -182,7 +182,7 @@ export const unitsConfig: UnitConfig[] = [
       phone: "+91 80-41171792",
       email: "rfq@unnathicnc.com",
     },
-    mapSrc: "https://maps.google.com/maps?q=13.018545,77.506557&z=16&output=embed",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2932493679077!2d77.5018843736754!3d13.016988337302525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cfac4663ddb%3A0xc169fcf8ebfffd0!2sUnnathi%20CNC%20Technologies%20Pvt%20Ltd%2C%20Unit%201!5e0!3m2!1sen!2sin!4v1775124633753!5m2!1sen!2sin",
   },
   {
     id: "bangalore-2",
@@ -209,7 +209,7 @@ export const unitsConfig: UnitConfig[] = [
       phone: "+91 80-41171792",
       email: "rfq@unnathicnc.com",
     },
-    mapSrc: "https://maps.google.com/maps?q=13.014614,77.500831&z=16&output=embed",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.315312433018!2d77.49790728885498!3d13.015581599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d00dbd4c93b%3A0xf3aff97826141941!2sUnnathi%20CNC%20Technologies%20Pvt%20Ltd%20Unit%202!5e0!3m2!1sen!2sin!4v1775125651480!5m2!1sen!2sin",
   },
   {
     id: "bangalore-3",
@@ -247,7 +247,7 @@ export const unitsConfig: UnitConfig[] = [
       phone: "+91 80-41171792",
       email: "rfq@unnathicnc.com",
     },
-    mapSrc: "https://maps.google.com/maps?q=12.976047,77.439051&z=16&output=embed",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15551.737614227393!2d77.42066927987061!3d12.976047349719472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3b7ff566fcb3%3A0xd0a37cab388d2d9!2sUnnathi%20CNC%20Technologies%20Pvt%20Ltd%20%2C%203rd%20Unit!5e0!3m2!1sen!2sin!4v1775125723613!5m2!1sen!2sin",
   },
   {
     id: "tumakuru",

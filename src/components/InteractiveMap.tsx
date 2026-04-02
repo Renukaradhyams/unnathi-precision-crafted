@@ -56,7 +56,7 @@ const InteractiveMap = () => {
                           </a>
                         </Button>
                         <Button variant="ghost" size="sm" className="h-7 sm:h-8 text-[10px] sm:text-xs gap-1" asChild>
-                          <a href={unit.mapSrc.replace("&output=embed", "")} target="_blank" rel="noopener noreferrer">
+                          <a href={unit.mapSrc.replace("/embed", "/maps").replace("&output=embed", "")} target="_blank" rel="noopener noreferrer">
                             Maps <ExternalLink className="h-3 w-3" />
                           </a>
                         </Button>

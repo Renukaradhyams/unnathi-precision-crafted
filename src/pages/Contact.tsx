@@ -67,7 +67,7 @@ const Contact = () => {
                 { icon: MapPin, label: "Registered Office", value: "UNNATHI CNC Technologies Pvt. Ltd., No.487, D1 & D2, 13th cross, 4th Phase, Peenya Industrial Area, Bangalore – 560058, India" },
                 { icon: Phone, label: "Phone", value: "080-41171792 | +91 9480686747 | +91 9480686743" },
                 { icon: Mail, label: "Email", value: "rfq@unnathicnc.com | sales@unnathicnc.com" },
-                { icon: Clock, label: "Working Hours", value: "Mon - Sat: 9:00 AM - 6:00 PM" },
+                { icon: Clock, label: "Working Hours", value: "Mon - Sat: 9:00 AM - 5:30 PM" },
               ].map((item) => (
                 <motion.div key={item.label} whileHover={{ x: 4 }} className="flex gap-4 group">
                   <div className="w-11 h-11 rounded-xl bg-gradient-industrial flex items-center justify-center shrink-0 shadow-industrial group-hover:scale-110 transition-transform">
