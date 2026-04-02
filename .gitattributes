@@ -1,0 +1,7 @@
+# Ensure review tools treat SVG files as text (prevents 'binary files are not supported')
+*.svg text eol=lf
+*.xml text eol=lf
+*.txt text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
