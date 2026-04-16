@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.unnathicnc.com/sitemap.xml
+Sitemap: https://www.unnathicnc.com/image-sitemap.xml
+
+# Bot specific hints
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
