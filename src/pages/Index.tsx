@@ -237,9 +237,9 @@ const Index = () => {
               </p>
               <VideoCarousel
                 videos={[
-                  { id: "v1", title: "Unit 1 — Manufacturing Facility Tour", thumbnail: pageSectionMedia.home.sections.videoPoster?.asset?.src, src: "/videos/unnathi-tour.mp4" },
-                  { id: "v2", title: "Unit 2 — Advanced Machining Shopfloor", thumbnail: pageSectionMedia.home.sections.capabilityTurning?.asset?.src, src: "/videos/unnathi-tour-02.mp4" },
-                  { id: "v3", title: "Unit 3 — Quality & Precision Inspection", thumbnail: pageSectionMedia.home.sections.capabilityQuality?.asset?.src, src: "/videos/unnathi-tour-03.mp4" },
+                  { id: "v1", title: "Integrated Facility Tour — Comprehensive Showcase", thumbnail: pageSectionMedia.home.sections.videoPoster?.asset?.src, src: "/videos/unnathi-tour.mp4" },
+                  { id: "v2", title: "Precision Engineering — Multi-Unit Manufacturing", thumbnail: pageSectionMedia.home.sections.capabilityTurning?.asset?.src, src: "/videos/unnathi-tour-02.mp4" },
+                  { id: "v3", title: "Quality Excellence — Advanced Infrastructure Remix", thumbnail: pageSectionMedia.home.sections.capabilityQuality?.asset?.src, src: "/videos/unnathi-tour-03.mp4" },
                 ]}
               />
               <p className="mt-3 text-xs text-muted-foreground italic">
