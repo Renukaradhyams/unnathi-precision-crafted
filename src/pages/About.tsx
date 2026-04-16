@@ -34,12 +34,16 @@ const milestones = [
   { year: "2007", event: "Company Founded — Precision machining company established with a strong focus on CNC capability" },
   { year: "2009", event: "First Major OEM Partnership Established" },
   { year: "2011", event: "ISO 9001 Certification Achieved" },
+  { year: "2012", event: "Purchased 12,000 Sq. feet Industrial land & building in Peenya Industrial Area" },
   { year: "2013", event: "Expanded to Multi-Machine CNC Facility" },
-  { year: "2016", event: "AS9100D Certification — Entered Aerospace Segment" },
-  { year: "2018", event: "Unit 2 — Advanced Milling Facility Operational" },
-  { year: "2020", event: "100+ Global Clients Milestone" },
-  { year: "2022", event: "Unit 3 — Quality & Batch Production Facility" },
-  { year: "2024", event: "Unit 4 — Tumakuru High-Volume Manufacturing" },
+  { year: "2016", event: "AS9100D Certification — Entered Aerospace Segment. First global client serviced" },
+  { year: "2018", event: "Unit 2 — Dedicated manufacturing shopfloor for overseas customers established" },
+  { year: "2020", event: "Reached major milestone with multiple global clients" },
+  { year: "2021", event: "Fabrication facility setup" },
+  { year: "2022", event: "Unit 3 — Electropolishing & Passivation facility established" },
+  { year: "2023", event: "Acquired 17,500 Sq. feet land for further expansion" },
+  { year: "2024", event: "Unit 4 established for heavy engineering with 44,000 Sq. feet facility" },
+  { year: "2025", event: "Added a Heavy Vertical Turret Lathe (VTL) to Unit 4" },
 ];
 
 const missionPoints = [

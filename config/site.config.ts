@@ -14,7 +14,7 @@ export const siteConfig = {
     height: 900,
     type: seoMedia.homeHero.mimeType,
   },
-  establishedYear: 2008,
+  establishedYear: 2007,
   social: {
     linkedin: "https://www.linkedin.com/company/unnathi-cnc",
     twitter: "https://x.com/unnathicnc",
