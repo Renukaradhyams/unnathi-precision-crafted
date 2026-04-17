@@ -55,7 +55,7 @@ function getSmtpConfigError() {
 
 function createSmtpTransporter() {
   const env = getResolvedSmtpEnv();
-  const portAsNumber = Number(env.SMTP_PORT) || 465;
+  const portAsNumber = Number(env.SMTP_PORT) || 587;
   const secure = portAsNumber === 465;
 
   return nodemailer.createTransport({
