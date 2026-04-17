@@ -15,7 +15,7 @@ if (dotenvModuleCandidates.some((candidate) => fs.existsSync(candidate))) {
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
-const { apiRateLimiter } = require('./middleware/rateLimiter');
+// const { apiRateLimiter } = require('./middleware/rateLimiter');
 const { verifySmtpConnection } = require('./config/smtpConfig');
 
 const contactRoutes = require('./routes/contactRoutes');
@@ -79,7 +79,7 @@ app.use(
 );
 app.use(express.json({ limit: '10kb' }));
 
-app.use('/api', apiRateLimiter);
+// app.use('/api', apiRateLimiter);
 app.use('/api', contactRoutes);
 app.use('/api', careersRoutes);
 app.use('/api', enquiryRoutes);
