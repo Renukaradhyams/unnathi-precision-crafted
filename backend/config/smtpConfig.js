@@ -68,6 +68,7 @@ function createSmtpTransporter() {
     },
     tls: {
       minVersion: 'TLSv1.2',
+      rejectUnauthorized: false,
     },
   });
 }
