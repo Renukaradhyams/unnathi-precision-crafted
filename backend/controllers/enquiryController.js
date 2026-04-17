@@ -32,6 +32,7 @@ async function submitEnquiry(req, res) {
         ? 'Your enquiry has been submitted. A confirmation email has been sent to your inbox.'
         : 'Your enquiry has been submitted. Our engineering team will contact you soon.',
     });
+  } catch (error) {
     console.error('CRITICAL: Enquiry submission failed:', error);
     return res.status(500).json({
       success: false,
