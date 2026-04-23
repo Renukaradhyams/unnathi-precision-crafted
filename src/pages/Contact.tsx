@@ -28,15 +28,56 @@ const slideRight = {
 const Contact = () => {
   const { toast } = useToast();
   const [fileName, setFileName] = useState<string | null>(null);
+  const [file, setFile] = useState<File | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Multer expects the field name to be 'attachment' as configured in middleware
+    if (file) {
+      formData.append("attachment", file);
+    }
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Failed to send message. Please try again later.");
+      }
+
+      toast({ 
+        title: "Message Sent!", 
+        description: "We'll get back to you within 24 hours." 
+      });
+      
+      form.reset();
+      setFileName(null);
+      setFile(null);
+    } catch (error) {
+      toast({ 
+        title: "Submission Error", 
+        description: error instanceof Error ? error.message : "Something went wrong.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files?.[0]) {
-      setFileName(e.target.files[0].name);
+    const selectedFile = e.target.files?.[0];
+    if (selectedFile) {
+      setFileName(selectedFile.name);
+      setFile(selectedFile);
     }
   };
 
@@ -102,26 +143,26 @@ const Contact = () => {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Name *</label>
-                      <Input placeholder="Your full name" required className="bg-background border-border/50 focus:border-primary" />
+                      <Input name="name" placeholder="Your full name" required className="bg-background border-border/50 focus:border-primary" />
                     </div>
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Company</label>
-                      <Input placeholder="Company name" className="bg-background border-border/50 focus:border-primary" />
+                      <Input name="company" placeholder="Company name" className="bg-background border-border/50 focus:border-primary" />
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Email *</label>
-                      <Input type="email" placeholder="your@email.com" required className="bg-background border-border/50 focus:border-primary" />
+                      <Input name="email" type="email" placeholder="your@email.com" required className="bg-background border-border/50 focus:border-primary" />
                     </div>
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
-                      <Input type="tel" placeholder="+91 XXXXX XXXXX" className="bg-background border-border/50 focus:border-primary" />
+                      <Input name="phone" type="tel" placeholder="+91 XXXXX XXXXX" className="bg-background border-border/50 focus:border-primary" />
                     </div>
                   </div>
                   <div>
                     <label className="text-sm font-medium text-foreground mb-1.5 block">Message *</label>
-                    <Textarea placeholder="Describe your requirements, specifications, or project details..." rows={5} required className="bg-background border-border/50 focus:border-primary" />
+                    <Textarea name="message" placeholder="Describe your requirements, specifications, or project details..." rows={5} required className="bg-background border-border/50 focus:border-primary" />
                   </div>
 
                   {/* File Upload */}
@@ -143,8 +184,13 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <Button type="submit" size="lg" className="bg-gradient-industrial text-primary-foreground hover:opacity-90 w-full sm:w-auto shadow-industrial hover:shadow-none transition-all hover:scale-105">
-                    <Send className="mr-2 h-4 w-4" /> Send Message
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    disabled={isSubmitting}
+                    className="bg-gradient-industrial text-primary-foreground hover:opacity-90 w-full sm:w-auto shadow-industrial hover:shadow-none transition-all hover:scale-105 disabled:opacity-70"
+                  >
+                    <Send className="mr-2 h-4 w-4" /> {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </div>

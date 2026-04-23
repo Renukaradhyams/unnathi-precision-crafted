@@ -21,7 +21,7 @@ function getFromAddress() {
   return `"Unnathi CNC Website" <${SMTP_FROM}>`;
 }
 
-async function sendToCompany({ subject, html, replyTo }) {
+async function sendToCompany({ subject, html, replyTo, attachments = [] }) {
   const configError = getSmtpConfigError();
 
   if (configError) {
@@ -37,6 +37,7 @@ async function sendToCompany({ subject, html, replyTo }) {
     html,
     text: htmlToText(html),
     replyTo: replyTo || undefined,
+    attachments,
   });
 }
 
