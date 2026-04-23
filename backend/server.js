@@ -71,7 +71,18 @@ const autoBuildFrontend = () => {
 
 autoBuildFrontend();
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+        "frame-src": ["'self'", "https://*.google.com", "https://*.google.co.in"],
+        "img-src": ["'self'", "data:", "https://*.googleapis.com", "https://*.gstatic.com", "https://*.google.com", "https://*.google.co.in"],
+      },
+    },
+    crossOriginEmbedderPolicy: false,
+  })
+);
 app.use(
   cors({
     origin: process.env.FRONTEND_URL || true,
