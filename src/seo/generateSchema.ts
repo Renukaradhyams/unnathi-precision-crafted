@@ -152,15 +152,11 @@ export const generateProductSchema = (name: string, description: string, image: 
   description,
   image: absoluteUrl(image),
   category,
-  brand: { "@id": baseId },
-  manufacturer: { "@id": baseId },
-  offers: {
-    "@type": "Offer",
-    "url": `${siteConfig.siteUrl}/contact`,
-    "availability": "https://schema.org/InStock",
-    "itemCondition": "https://schema.org/NewCondition",
-    "priceCurrency": "INR",
+  brand: {
+    "@type": "Brand",
+    "name": siteConfig.shortName,
   },
+  manufacturer: { "@id": baseId },
   aggregateRating: {
     "@type": "AggregateRating",
     "ratingValue": "5",
