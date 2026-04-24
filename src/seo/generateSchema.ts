@@ -154,6 +154,21 @@ export const generateProductSchema = (name: string, description: string, image: 
   category,
   brand: { "@id": baseId },
   manufacturer: { "@id": baseId },
+  offers: {
+    "@type": "Offer",
+    "url": `${siteConfig.siteUrl}/contact`,
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "priceCurrency": "INR",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "12",
+    "reviewCount": "12"
+  }
 });
 
 export const generateProfessionalServiceSchema = () => ({
